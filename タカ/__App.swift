@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct __App: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
+}
+
+extension String {
+  var localized: String {
+    return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
+  }
 }
